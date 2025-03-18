@@ -108,6 +108,11 @@ nav li.home {
     width: 100%;
 }
 
+.image_area img:hover {
+    scale: 115%;
+    transition: 0.5s ease-in-out;
+}
+
 
 .right_side {
     width: 60%;
