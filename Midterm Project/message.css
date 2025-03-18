@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oranienbaum&display=swap');
+
+:root {
+    --c-text: #121111;
+    --c-bg: #ffe9e0ff;
+    --c-brown: #543417;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+
+/* Nav Styling */
+nav {
+    margin-top: .8rem;
+    font-family:"Oranienbaum",'Times New Roman', Times, serif ;
+}
+
+nav a {
+    color: #121111;
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    font-size: 1rem;
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5rem;
+}
+
+nav li.blog {
+    position: absolute;
+    right: 2rem;
+}
+
+nav li.message {
+    position: absolute;
+    right: 6rem;
+}
+
+nav li.home img {
+    width: 100%;
+    height: 100%;
+}
+
+nav li.home {
+    padding: 0rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* LEFT SIDE */
+
+body {
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+    background-color: var(--c-bg);
+}
+
+h1 {
+    font-family: "Instrument Serif", Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    margin-top: 2rem;
+}
+
+/* LEFT SIDE */
+/* FORM STYLING */
+.left_side {
+    position: relative;
+    width: 50%;
+    margin-left:5%;
+    
+}
+
+.form {
+    width: 100%;
+    border-style: dashed;
+    padding: 2rem;
+    margin: 0;
+    color: var(--c-text);
+    background-color: var(--c-bg);
+}
+
+.name_email {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.label {
+    font-size: 1.25rem;
+    padding: 1% 1% 1% 0;
+}
+
+.input {
+    padding: 1rem;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;}
+
+.message_area {
+    display: flex;
+        /* send message part each has its own width */
+    flex-direction: column;
+    padding: 2% 1% 1% 0;
+    font-size: 1.25rem;
+}
+
+textarea {
+    height: 10rem;
+    width: auto;
+    padding: 1rem;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+}
+
+.btn_bar {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btn {
+    width: 25%;
+    padding: 1%;
+    font-size: 1.25rem;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+    background-color: #9fb89a;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    border-color: lightslategray;
+}
+
+.btn:hover {
+    background-color: #708f6a;
+    color: var(--c-bg);
+}
+
+/* RIGHT SIDE */
+.right_side {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 45%;
+    padding: 5% 5% 0 5%;
+}
+
+.right_side img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+/* FOOTER STYLING */
+footer {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.footer_bar {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer_home {
+    font-size: 1.25rem;
+    margin: 0;
+    text-decoration: none;
+    color: var(--c-text);
+
+
+}
+
+.fa {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.social_icons {
+    display: block;
+    float: left;
+    position: absolute;
+    right: 5%;
+}
+
+.fa-instagram {
+    color: #6f0f8c;
+}
+
+.fa-linkedin {
+    color: #234b8c;
+}
+
+.fa-spotify {
+    color: #228f36;
+}
+
+.fa-github {
+    color: #3c3d54;
+}
+
+@media(max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left_side {
+        width: 90%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .right_side {
+        width: 100%;
+    }
+}

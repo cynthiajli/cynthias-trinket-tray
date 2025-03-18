@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oranienbaum&display=swap');
+:root {
+    --c-text:#121111;
+    --c-bg:#ffe9e0ff;
+    --c-brown:#543417;
+
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    background-color: var(--c-bg);
+}
+
+h2 {
+    margin: 0;
+    font-family: "Instrument Serif", Georgia,'Times New Roman', Times, serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+
+    margin: 0;
+    text-align: center;
+    font-family: "Instrument Serif", Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    color: var(--c-text);
+    width: 70%;
+    
+}
+
+/* PARAGRAPH STYLING */
+p {
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+}
+
+/* NAV BAR */
+nav{
+    margin-top: .8rem;
+    font-family: "Oranienbaum",'Times New Roman',Times,  serif;
+}
+nav a {
+    color: var(--c-text);
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    font-size: 1rem;
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5rem;
+}
+
+/* nav li:hover {
+    background-color: rgba(84, 52, 23,0.4);
+    color: var(--c-bg);
+} */
+
+nav li.blog {
+    position: absolute;
+    right: 2rem;
+}
+
+nav li.message {
+    position: absolute;
+    right: 6rem;
+}
+
+nav li.home img {
+    width:100%;
+    height:100%;
+}
+nav li.home{
+    padding:0rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right:1rem;
+}
+
+/* LEFT BOX */
+/* IMAGE */
+.item_photo {
+    position: relative;
+    width: 40%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 2rem;
+    
+}
+
+.item_photo img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    
+    
+}
+
+/* RATING BOX */
+.rating_box_big {
+    font-size: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-style: dashed;
+    border-color: var(--c-text);
+}
+
+iframe {
+    margin-bottom: 1rem;
+}
+
+/* RIGHT BOX */
+/* BLOG TEXT */
+.blog_text {
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 45%;
+    height: auto;
+}
+
+.blog_text h2 {
+    font-size: 3rem;
+}
+
+.blog_text p {
+    font-size: 1rem;
+}
+
+/* FOOTER STYLING */
+footer {
+    display: flex;
+    flex-direction: row ;
+        /* flex-wrap: wrap; */
+}
+
+.footer_bar {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.footer_home {
+    font-size: 1.25rem;
+    margin: 0;
+    text-decoration: none;
+    color: var(--c-text);
+
+    
+}
+
+.fa {
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 2rem;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.social_icons {
+    display: block;
+    float: left;
+    position: absolute;
+    right: 5%; 
+}
+
+.fa-instagram {
+    color: #6f0f8c;
+}
+
+.fa-linkedin {
+    color: #234b8c;
+}
+
+.fa-spotify {
+    color: #228f36;
+}
+
+.fa-github {
+    color: #3c3d54 ;
+}
+
+/* MOBILE VERSION OF RATING BOX */
+.rating_box_small{
+    display:none;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+    .container{
+        flex-direction:column;
+    }
+    .rating_box_big{
+        display:none;
+    }
+    .blog_text{
+        width:90%;
+    }
+    .blog_text h2{
+        text-align:center;
+    }
+    .item_photo{
+        width:90%;
+    }
+
+    .rating_box_small{
+        display:block;
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0 0 2rem 0;
+        border-style: dashed;
+        border-color: var(--c-text);
+    }
+}
+

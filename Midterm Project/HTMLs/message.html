@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cynthia's Trinket Tray - Leave a Message</title>
+    <link rel="stylesheet" href="../message.css" />
+    <script src="https://kit.fontawesome.com/d34abcb241.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <nav>
+            <ul>
+                <li class="home"><a href="../HTMLs/midterm_project.html"><img src="../Images/logo.png" /></a></li>
+                <li><a href="all_trinkets.html">see all trinkets</a></li>
+                <li class="blog"><a href="blog.html">blog</a> </li>
+                <li class="message"><a href="message.html">leave a message</a></li>
+            </ul>
+        </nav>
+
+    <div class="container">
+        <div class="left_side">
+            <h1>Leave a Message</h1>
+            <p> There's so much more to get my hands on, and I'm always looking for more things Miffy, Sonny Angel, Snoopy, 
+                or anything overall small and cute! Let me know if you have any reccomendations, want to send your own review,
+            or have any questions! </p>
+            
+            <div class="form">
+            <form action="https://formspree.io/f/mvgkgven" method="POST">
+                <div class="name_email">
+                    <label for="name" class="label">Name</label>
+                    <input type="text" name="name" required class="input"/>
+
+                    <label for="email" class="label">E-mail</label>
+                    <input type="email" name="email" required class="input"/>                    
+                </div>
+
+                <div class="message_area">
+                    <label for="message">Send me your messages, thought, reccomendations, anything!</label>
+                    <textarea name="message"></textarea>
+                </div>
+
+                <div classs="btn_bar">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+
+                <input name="subject" type="hidden" value="New Submission from {{name}}" />
+
+            </form> 
+        </div>
+        </div>
+
+        <div class="right_side">
+            <div class="cynthia_img">
+                <img src="../Images/cynthia_headshot.jpg" alt="Cynthia's Headshot" />
+            </div>
+                <h2>Hi! I'm Cynthia</h2>
+                <p> I'm an avid collector of all things, cute, fun, and trinket-sized! I've been a collector for my entire life, 
+                    since I was a kid starting with Littlest Pet Shop dolls and limited-edition Snapple bottles to a full-fledged 
+                  Sonny angel hoarder and matchbook conessuier. I created this virtual trinket tray to share the bits of joy I get
+                    from collecting and the love I've experienced from this community. </p>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+        <footer class="footer_bar">
+            <a href="midterm_project.html" class="footer_home">back to my tray</a>
+            <div class="social_icons">
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-spotify"></a>
+                <a href="#" class="fa fa-github"></a>
+            </div>
+        </footer>
+
+
+</body>

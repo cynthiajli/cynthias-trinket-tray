@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oranienbaum&display=swap');
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 0;
+    background-color: #ffe9e0ff;
+}
+
+/* Heading Styling */
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 3% 0;
+    text-align: center;
+    font-family: "Instrument Serif", Georgia, 'Times New Roman', Times, serif;
+    font-size: 7rem;
+    color: #121111;
+    width: 70%;
+}
+
+/* Nav Styling */
+nav{
+    margin-top:.8rem;
+     font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+}
+nav a {
+    color: #121111;
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    font-size: 1rem;
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5rem;
+}
+
+nav li.blog {
+    position: absolute;
+    right: 2rem;
+}
+
+nav li.message {
+    position: absolute;
+    right: 6rem;
+}
+
+nav li.home img {
+    width: 100%;
+    height: 100%;
+}
+
+nav li.home {
+    padding: 0rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* PHOTO LINKS */
+
+.photo_link img {
+    max-width: 50rem;
+    width: 20rem;
+    position: absolute;
+}
+
+/* INDIVIDUAL ITEMS */
+.miffy_coin_pouch {
+    left: 10rem;
+    top: 50%;
+}
+
+.mouse_sonny {
+    left: 1rem;
+    top: 47rem;
+}
+
+.miffy_blue {
+    left: 40%;
+    top: 66%;
+}
+
+.miffy_lamp {
+    min-width: 30rem;
+    right: 2%;
+    top: 24rem;
+}
+
+.kirby_star {
+    left: 20rem;
+    top: 43rem;
+}
+
+.stand_oil_bag {
+    min-width: 30rem;
+    top: 41rem;
+    right: 17rem;
+}
+
+
+
+@media(max-width:768px) {
+.miffy_coin_pouch {
+        left: 5rem;
+        top: 35rem;
+    }
+
+    .mouse_sonny {
+        left: 0rem;
+        top: 57rem;
+    }
+
+    .miffy_blue {
+        /* right: 1rem; */
+        top: 51rem;
+        left: 25rem;
+    }   
+
+    .miffy_lamp {
+        min-width: 25rem;
+        right: 3rem;
+        top: 74rem;
+    }
+
+    .kirby_star {
+        left: 25rem;
+        top: 30rem;
+    }
+
+    .stand_oil_bag {
+        min-width: 30rem;
+        top: 80rem;
+        right: 17rem;
+    }
+
+}
