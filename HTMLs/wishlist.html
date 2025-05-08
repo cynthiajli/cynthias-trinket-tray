@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cynthia's Trinket Tray - Sonny Angel "Cilla"</title>
+    <link rel="stylesheet" href="../wishlist.css" />
+    <script src="https://kit.fontawesome.com/d34abcb241.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="home"><a href="../index.html"><img src="../Images/logo.png" /></a></li>
+            <li><a href="all_trinkets.html">see all trinkets</a></li>
+            <li class="blog"><a href="blog.html">blog</a> </li>
+            <li class="message"><a href="message.html">leave a message</a></li>
+        </ul>
+    </nav>
+    
+    <div class="header">
+        <h1>My Wishlist</h1>
+    </div>
+
+    <div class="wishlist">
+    <ul id="wishlistItems"></ul>
+    </div>
+
+    <div class="button">
+    <button id="clearWishlist">Clear Wishlist</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // GRABS WISHLIST FROM LOCAL STORAGE
+    document.addEventListener('DOMContentLoaded', () => {
+        const list = document.getElementById("wishlistItems");
+        let wishlist = localStorage.getItem("wishlist");
+
+        if (wishlist) {
+            wishlist = JSON.parse(wishlist);
+        } else {
+            wishlist = [];
+        }
+
+        // IF THERE IS NO ENTRIES, DISPLAY EMPTY
+        if (wishlist.length === 0) {
+            const li = document.createElement("li");
+            li.textContent = "your wishlist is empty.";
+            list.appendChild(li);
+        } else {
+            wishlist.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.textContent = item.title;
+
+                // CREATE REMOVE BUTTON
+                const removeBtn = document.createElement("button");
+                removeBtn.textContent = "Remove";
+
+                // IF BUTTON IS CLICKED, REMOVE ITEM AND RELOAD
+                removeBtn.addEventListener("click", () => {
+                    wishlist.splice(index, 1);
+                    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                    window.location.reload(); 
+                });
+
+
+                // ADD BUTTON AND ITEM TO LIST
+                li.appendChild(removeBtn);
+                list.appendChild(li);
+            });
+        }
+
+        // CLEAR LIST BUTTON
+        document.getElementById("clearWishlist").addEventListener("click", () => {
+            localStorage.removeItem("wishlist");
+            window.location.reload();
+        });
+    });
+</script>

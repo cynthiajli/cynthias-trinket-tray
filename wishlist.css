@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Oranienbaum&display=swap');
+
+:root {
+    --c-text: #121111;
+    --c-bg: #ffe9e0ff;
+    --c-brown: #543417;
+
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: var(--c-bg);
+}
+
+h2 {
+    margin: 0;
+    font-family: "Instrument Serif", Georgia, 'Times New Roman', Times, serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+
+    margin: 0;
+    text-align: center;
+    font-family: "Instrument Serif", Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+    color: var(--c-text);
+    width: 70%;
+
+}
+
+
+/* NAV BAR */
+nav {
+    margin-top: .8rem;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+}
+
+nav a {
+    color: var(--c-text);
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0.5rem 0;
+    padding-left: 2rem;
+    font-size: 1rem;
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5rem;
+}
+
+/* nav li:hover {
+    background-color: rgba(84, 52, 23,0.4);
+    color: var(--c-bg);
+} */
+
+nav li.blog {
+    position: absolute;
+    right: 2rem;
+}
+
+nav li.message {
+    position: absolute;
+    right: 6rem;
+}
+
+nav li.wishlist {
+    position: absolute;
+    left: 13rem;
+}
+
+nav li.home img {
+    width: 100%;
+    height: 100%;
+}
+
+nav li.home {
+    padding: 0rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* PARAGRAPH STYLING */
+#wishlistItems li {
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+.wishlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wishlist ul {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button button {
+    background-color: #9FB89A;
+    width: 10rem;
+    height: 3rem;
+    border-color: lightgray;
+    border-radius: 1rem;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#wishlistItems li{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 1.5rem;
+}
+
+
+#wishlistItems button {
+    background-color: pink;
+    margin-left: 1rem;
+    width: 4rem;
+    height: auto;
+    border-color: lightgray;
+    border-radius: 1rem;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}

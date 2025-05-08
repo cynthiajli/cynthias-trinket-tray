@@ -72,25 +72,61 @@
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                     </iframe>
                 </div>
-    </div>
-    
-   </div>    
-    
-
-    </main>
-
-    <footer class="footer_bar">
-        <a href="../index.html" class="footer_home">back to my tray</a>
-        <div class="social_icons">
-            <a href="https://www.instagram.com/cynthia.j.li/" target="_blank" class="fa fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/cynthiajli/" target="_blank" class="fa fa-linkedin"></a>
-            <a href="https://open.spotify.com/user/mintycindy24?si=c983c76ac5cb4fda" target="_blank"
-                class="fa fa-spotify"></a>
-            <a href="https://github.com/cynthiajli" target="_blank" class="fa fa-github"></a>
+            <div class="button">
+                <button class="add-to-wishlist" data-id="trinket02" data-title="Kirby on a Star Figurine">
+                    Add to Wishlist
+                </button>
+                <a href="wishlist.html">See my Wishlist</a>
+            </div>
         </div>
-    </footer>
+        
+    </div>    
+        
+</div>
 
+</div>
+
+
+</main>
+
+<footer class="footer_bar">
+    <a href="../index.html" class="footer_home">back to my tray</a>
+    <div class="social_icons">
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-spotify"></a>
+        <a href="#" class="fa fa-github"></a>
+    </div>
+</footer>
 
 </body>
 
 </html>
+
+<script>
+    // ADD TO WISHLIST BUTTON
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".add-to-wishlist").forEach(button => {
+            button.addEventListener("click", () => {
+                const trinketId = button.getAttribute("data-id");
+                const trinketTitle = button.getAttribute("data-title");
+
+                // RETRIEVES EXISTING WISHLIST
+                let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+                // CHECKS IF THE ITEM IS ALREADY IN THE LIST
+                const alreadyInWishlist = wishlist.some(item => item.id === trinketId);
+                if (alreadyInWishlist) {
+                    alert("This item is already in your wishlist.");
+                    return;
+                }
+
+                // ADDS NEW ITEM TO LIST
+                wishlist.push({ id: trinketId, title: trinketTitle });
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+
+            });
+        });
+    });
+</script>

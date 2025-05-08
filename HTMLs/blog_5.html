@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cynthia's Trinket Tray - Black Stand Oil Bag</title>
+    <link rel="stylesheet" href="../blog_5.css" />
+    <script src="https://kit.fontawesome.com/d34abcb241.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="home"><a href="../index.html"><img src="../Images/logo.png" /></a></li>
+            <li><a href="all_trinkets.html">see all trinkets</a></li>
+            <li class="blog"><a href="blog.html">blog</a> </li>
+            <li class="message"><a href="message.html">leave a message</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>The Blog</h1>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="item_photo">
+                <img src="../Images/stand_oil_bag.png" alt="Black Stand Oil Bag" />
+
+                <div class="rating_box_big">
+                    <p>Trinket Rating: 4.8/5</p>
+                    <p>Tags: <strong>accessories, useful, medium, black, bags</strong></p>
+                    <p>Related Song:</p>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/1a19jsjG2DvbN1fVJonKUU?utm_source=generator" width="100%" height="152"
+                        frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="blog_text">
+                <h2>Black Stand Oil Bag</h2>
+                <p> So this is the new bag I got after my mom decided to take the one I already owned… The bag is from a Korean brand
+                    called Stand Oil, and I first saw it on LeSerrafim member Yunjin. She styled it super cutely with bows and
+                    keychains, and it immediately became a trend. So that’s why I got a dupe. But when I lost the dupe to my mother, I
+                    decided, might as well buy myself the real thing. So I found a deal on depop, and bought it used. </p>
+                
+                <p> I bought this bag perfectly in time to bring on my trip to Canada, which was my 2025 Spring Break trip. For two
+                    boring days me and my best friend Vivien went to Montreal, exploring the city, visiting my man child of a cousin,
+                    having mediocre poutine. But then the fun was when we met up with our good friends Nikhil and Patrick as well as
+                    their friends in Toronto. They knew people who went to University of Toronto, so the group of us would hang around
+                    all day, exploring the city, getting milk teas, and overall walking A LOT. We saw the Royal Ontario Museum, the UofT
+                    campus, Chinatown and a lot more. Also great for us, the drinking age in Toronto is 19, and given that most of our
+                    group was not 21 yet, it was one of our only times to go to bars together, so we went out. Every night. I think I
+                    got a total of 12 hours of sleep across the 3 day,,, but that might be also because I’m a Type A planner, waking up
+                    at 10 to make reservations and everything. </p>
+                
+                <p> I think this trip to Toronto one, brought me so much closer to my friends, and two, introduced me to so many great
+                    people that I still talk to so much to this day. I’m really lucky to have an amazing circle around me, and that’s
+                    something I always cherish. </p>
+                
+                <p> The song I chose for this bag is Beaches by beabadoobee. I know Patrick to be literally number 1 beabadoobee fan,
+                    and we talk about music a lot. Beaches is one of my favorite songs by her, and I definitely had it on repeat when I
+                    was on my way there. Also a funny moment, one of the friends I met (Jenn) was super drunk trying to play this song
+                    on the guitar the last night I was in Canada. You’re an icon Jenn. </p>
+
+
+
+
+                <div class="rating_box_small">
+                    <p>Trinket Rating: 4.8/5</p>
+                    <p>Tags: <strong>accessories, useful, medium, black, bags</strong></p>
+                    <p>Related Song:</p>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/1a19jsjG2DvbN1fVJonKUU?utm_source=generator" width="100%" height="152"
+                        frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+                </div>
+
+                <!-- WISHLIST BUTTONS -->
+
+                <div class="button">
+                    <button class="add-to-wishlist" data-id="trinket06" data-title="Black Stand Oil Bag">
+                        Add to Wishlist
+                    </button>
+                    <a href="wishlist.html">See my Wishlist</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer_bar">
+        <a href="../index.html" class="footer_home">back to my tray</a>
+        <div class="social_icons">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-spotify"></a>
+            <a href="#" class="fa fa-github"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    // ADD TO WISHLIST BUTTON
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".add-to-wishlist").forEach(button => {
+            button.addEventListener("click", () => {
+                const trinketId = button.getAttribute("data-id");
+                const trinketTitle = button.getAttribute("data-title");
+
+                // RETRIEVES EXISTING WISHLIST
+                let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+                // CHECKS IF THE ITEM IS ALREADY IN THE LIST
+                const alreadyInWishlist = wishlist.some(item => item.id === trinketId);
+                if (alreadyInWishlist) {
+                    alert("This item is already in your wishlist.");
+                    return;
+                }
+
+                // ADDS NEW ITEM TO LIST
+                wishlist.push({ id: trinketId, title: trinketTitle });
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+
+            });
+        });
+    });
+</script>

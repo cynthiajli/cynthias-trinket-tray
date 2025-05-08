@@ -17,19 +17,42 @@
       <li class="message"><a href="HTMLs/message.html">leave a message</a></li>
     </ul>
   </nav>
-
+  <div class="wishlist"></div>
+  <div class="container">
     <div class="header">
       <h1>Welcome to Cynthia's Trinket Tray!</h1>
     </div>
+    <div class="subheader">
+      <p>drag and click me!</p>
+    </div>
 
-   <a href="HTMLs/blog.html" class="photo_link " ><img class="miffy_coin_pouch" src="Images/miffy_coin_pouch.png" alt="white silicone miffy coin pouch"/></a>
-   <a href="HTMLs/blog_2.html" class="photo_link"><img class="mouse_sonny" src="Images/mouse_sonny.png" alt="Donna Wilson Sonny Angel"/></a>
-   <a href="#" class="photo_link"><img class="miffy_blue" src="Images/miffy_blue.png" alt="Crocheted Miffy Keychain" /></a>
-   <a href="#" class="photo_link"><img class="miffy_lamp" src="Images/miffy_lamp.png" alt="White Silicon Miffy Lamp"/></a>
-   <a href="HTMLs/blog_1.html" class="photo_link"><img class="kirby_star" src="Images/kirby_star.png" alt=""/></a>
-   <a href="#" class="photo_link"><img class="stand_oil_bag" src="Images/stand_oil_bag.png" alt=""/></a>
-
-
+    <!-- IMAGE LINKS -->
+   <a href="HTMLs/blog.html" class="photo_link" ><img class="miffy_coin_pouch movable" src="Images/miffy_coin_pouch.png" alt="white silicone miffy coin pouch"/></a>
+   <a href="HTMLs/blog_2.html" class="photo_link"><img class="mouse_sonny movable" src="Images/mouse_sonny.png" alt="Donna Wilson Sonny Angel"/></a>
+   <a href="HTMLs/blog_4.html" class="photo_link"><img class="miffy_blue movable" src="Images/miffy_blue.png" alt="Crocheted Miffy Keychain" /></a>
+   <a href="HTMLs/blog_3.html" class="photo_link"><img class="miffy_lamp movable" src="Images/miffy_lamp.png" alt="White Silicon Miffy Lamp"/></a>
+   <a href="HTMLs/blog_1.html" class="photo_link"><img class="kirby_star movable" src="Images/kirby_star.png" alt=""/></a>
+   <a href="HTMLs/blog_5.html" class="photo_link"><img class="stand_oil_bag movable" src="Images/stand_oil_bag.png" alt=""/></a>
+    </div>
   
   </body>
+
+    <!-- DRAGGABLE ANIMATION -->
 </html>   
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+<script type="text/javascript" >
+  gsap.registerPlugin(Draggable);
+  Draggable.create(".movable", {
+      bounds: ".container",
+      inertia: true
+    });
+    
+    
+    // addition = ''
+    // delete innerhtml inside wishlist
+    // for(let i = 0;i<len(localStorage.wishlist);i++){
+    //   addition += `<h1>${localStorage.wishlist[i]}</h1>`
+    // }
+    // wishlist.addinnerhtml(addition)
+</script>

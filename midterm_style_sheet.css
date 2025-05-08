@@ -11,7 +11,11 @@ body {
     font-size: 0;
     background-color: #ffe9e0ff;
 }
-
+.container{
+    position:relative;
+    width:100vw;
+    height:100vh;
+}
 /* Heading Styling */
 .header {
     display: flex;
@@ -21,13 +25,28 @@ body {
     align-items: center;
 }
 
+
 h1 {
-    margin: 3% 0;
+    margin-top: 3%;
+    margin-bottom: 1rem;
     text-align: center;
     font-family: "Instrument Serif", Georgia, 'Times New Roman', Times, serif;
     font-size: 7rem;
     color: #121111;
-    width: 70%;
+    width: 60%;
+}
+
+
+.subheader {
+    display: flex;
+    justify-content: center;
+    font-family: "Oranienbaum", 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #121111;
+}
+
+.subheader p {
+    margin: 0;
 }
 
 /* Nav Styling */
@@ -64,6 +83,11 @@ nav li.message {
     right: 6rem;
 }
 
+nav li.wishlist {
+    position: absolute;
+    left: 13rem;
+}
+
 nav li.home img {
     width: 100%;
     height: 100%;
@@ -91,35 +115,35 @@ nav li.home {
 
 /* INDIVIDUAL ITEMS */
 .miffy_coin_pouch {
-    left: 10rem;
-    top: 50%;
+    left: 5%;
+    top: 10%;
 }
 
 .mouse_sonny {
-    left: 1rem;
-    top: 47rem;
+    left: 4%;
+    bottom: 11%;
 }
 
 .miffy_blue {
     left: 40%;
-    top: 66%;
+    bottom: 15%;
 }
 
 .miffy_lamp {
     min-width: 30rem;
-    right: 2%;
-    top: 24rem;
+    right: 0%;
+    top: 9%;
 }
 
 .kirby_star {
-    left: 20rem;
-    top: 43rem;
+    left: 23%;
+    bottom: 22%;
 }
 
 .stand_oil_bag {
     min-width: 30rem;
-    top: 41rem;
-    right: 17rem;
+    top: 35%;
+    right: 17%;
 }
 
 

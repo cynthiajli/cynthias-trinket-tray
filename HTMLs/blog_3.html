@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cynthia's Trinket Tray - Miffy Lamp"</title>
+    <link rel="stylesheet" href="../blog_3.css" />
+    <script src="https://kit.fontawesome.com/d34abcb241.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="home"><a href="../index.html"><img src="../Images/logo.png" /></a></li>
+            <li><a href="all_trinkets.html">see all trinkets</a></li>
+            <li class="blog"><a href="blog.html">blog</a> </li>
+            <li class="message"><a href="message.html">leave a message</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>The Blog</h1>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="item_photo">
+                <img src="../Images/miffy_lamp.png" alt="Miffy Lamp" />
+
+                <div class="rating_box_big">
+                    <p>Trinket Rating: 4.0/5</p>
+                    <p>Tags: <strong>miffy, lamp, medium, useful</strong></p>
+                    <p>Related Song:</p>
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/4YQImHflXSiIMXntcwPkx8?utm_source=generator" width="100%" height="152"
+                        frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <div class="blog_text">
+                <h2>Portable Miffy Lamp</h2>
+                <p>This Miffy Lamp is one of three sizes, and is the smallest one. It is battery operated, and turns on for 15 minutes
+                    at a time; then it automatically shuts off. The largest size of the lamp is a few feet tall, and is one of my holy
+                    grail home decor items, it just happens to also be hundreds of dollars and I don’t know if I am willing to pay
+                    that….</p>
+                
+                <p>I was given this lamp by my roommates and close friends for my 20th birthday, along with other little bits and bobs
+                    that I like. I was actually super touched because while I mention things I want all the time, this was something I
+                    was never expecting to receive. My best friends at the time (roommate Jasmine and our bestie Cesar) went to the MoMa
+                    Design store to pick it up the day of my birthday dinner. And when I came back from dinner, I opened the door to see
+                    a whole spread of things waiting for me, including a crazy amount of Sonny Angels. I'm always reminded of how
+                    amazing my friends are and how much I miss them, now that we don't live together anymore.</p>
+                
+                <p>Jasmine moved out of the dorms this year, and Cesar has been studying abroad in Italy. And even when the three of us
+                    are together, nothing will ever live up to us living directly across the hall from each other (totally by
+                    coincidence if you can believe it). I think I didn’t really appreciate the arrangement we were blessed with; every
+                    day I had at least five people over to have dinner, talk, and just act dumb together. It almost felt like having a
+                    family, everyone was just a few steps away. </p>
+                
+                <p>The song I chose for this trinket is Bongos by Megan thee Stallion. Cesar was a HUGE Megan fan, and Bongos had just
+                    come out a few months into the year. I remember he would walk into me and Jasmine’s room and yell “ALEXA PLAY
+                    BONGOS” to get us up and ready for the day. I think those might be some of my fondest memories at NYU.</p>
+
+
+
+
+                <div class="rating_box_small">
+                    <p>Trinket Rating: 4.0/5</p>
+                    <p>Tags: <strong>sonny angel, mouse, figurine, blind box, small</strong></p>
+                    <p>Related Song:</p>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/4YQImHflXSiIMXntcwPkx8?utm_source=generator" width="100%" height="152"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+                </div>
+
+                <!-- WISHLIST BUTTONS -->
+
+                <div class="button">
+                    <button class="add-to-wishlist" data-id="trinket04" data-title="Miffy Lamp">
+                        Add to Wishlist
+                    </button>
+                    <a href="wishlist.html">See my Wishlist</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer_bar">
+        <a href="../index.html" class="footer_home">back to my tray</a>
+        <div class="social_icons">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-spotify"></a>
+            <a href="#" class="fa fa-github"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<script>
+    // ADD TO WISHLIST BUTTON
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".add-to-wishlist").forEach(button => {
+            button.addEventListener("click", () => {
+                const trinketId = button.getAttribute("data-id");
+                const trinketTitle = button.getAttribute("data-title");
+
+                // RETRIEVES EXISTING WISHLIST
+                let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+                // CHECKS IF THE ITEM IS ALREADY IN THE LIST
+                const alreadyInWishlist = wishlist.some(item => item.id === trinketId);
+                if (alreadyInWishlist) {
+                    alert("This item is already in your wishlist.");
+                    return;
+                }
+
+                // ADDS NEW ITEM TO LIST
+                wishlist.push({ id: trinketId, title: trinketTitle });
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+
+            });
+        });
+    });
+</script>
